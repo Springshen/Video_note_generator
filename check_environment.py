@@ -89,7 +89,7 @@ def check_env_file():
     ]
     
     missing_vars = []
-    with open(env_file, 'r') as f:
+    with open(env_file, 'r', encoding='utf-8') as f:
         env_content = f.read()
         for var in required_vars:
             if var not in env_content or f"{var}=your-" in env_content:
